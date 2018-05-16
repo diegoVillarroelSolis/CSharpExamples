@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicMicroserviceDotNetCore", "BasicMicroserviceDotNetCore\BasicMicroserviceDotNetCore.csproj", "{18140AC1-28A4-4A62-BEC5-75B6403E5F4C}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2A4EDF18-E9F5-452B-ACB5-17534F89BD90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18140AC1-28A4-4A62-BEC5-75B6403E5F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18140AC1-28A4-4A62-BEC5-75B6403E5F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18140AC1-28A4-4A62-BEC5-75B6403E5F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18140AC1-28A4-4A62-BEC5-75B6403E5F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4EDF18-E9F5-452B-ACB5-17534F89BD90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4EDF18-E9F5-452B-ACB5-17534F89BD90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4EDF18-E9F5-452B-ACB5-17534F89BD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4EDF18-E9F5-452B-ACB5-17534F89BD90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F93E7E1D-A65A-4EAE-A814-2C885D9AE50C}
+	EndGlobalSection
+EndGlobal
