@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  jwt-authentication:
+    image: ${DOCKER_REGISTRY}jwtauthentication
+    build:
+      context: .
+      dockerfile: jwt-authentication\Dockerfile
