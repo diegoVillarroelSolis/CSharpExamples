@@ -20,6 +20,13 @@ namespace jwtAuthentication.Controllers
             _configuration = configuration;
         }
 
+        [AllowAnonymous]
+        [HttpGet("hello")]
+        public string Get()
+        {
+            return "hello world!";
+        }
+
         // POST api/Login
         //[AllowAnonymous]
         //[HttpPost]
