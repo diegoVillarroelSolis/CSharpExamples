@@ -8,8 +8,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 namespace jwtAuthentication.Controllers
 {
+    [Authorize]
     [Produces("application/json")]
-    [Route("api/Login")]
+    [Route("api/login")]
     public class LoginController : Controller
     {
         private readonly IConfiguration _configuration;
@@ -20,6 +21,7 @@ namespace jwtAuthentication.Controllers
         }
 
         // POST api/Login
+        //[AllowAnonymous]
         //[HttpPost]
         //public IActionResult ValidateUser([FromBody] UserDto user)
         //{
@@ -58,6 +60,12 @@ namespace jwtAuthentication.Controllers
             }
 
             return BadRequest("Could not verify username and password");
+        }
+
+        [HttpGet("test")]
+        public IActionResult Test()
+        {
+            return Ok("Operation with authentication");
         }
 
         public class UserDto
