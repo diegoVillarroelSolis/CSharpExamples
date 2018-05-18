@@ -27,17 +27,17 @@ namespace jwtAuthentication.Controllers
             return "hello world!";
         }
 
-        // POST api/Login
-        //[AllowAnonymous]
-        //[HttpPost]
-        //public IActionResult ValidateUser([FromBody] UserDto user)
-        //{
-        //    if (user.Name == "user" && user.Password == "secret")
-        //    {
-        //        return Ok("The user has been succesfully autthenticated");
-        //    }
-        //    return BadRequest("Could not verify username and password");
-        //}
+       // POST api/Login
+       [AllowAnonymous]
+       [HttpGet("validate")]
+        public bool ValidateUser([FromQuery] string user, [FromQuery] string password)
+        {
+            if (user == "user" && password == "secret")
+            {
+                return true;
+            }
+            return false;
+        }
 
         [AllowAnonymous]
         [HttpPost]
