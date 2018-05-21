@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  jwtauthentication:
-    image: ${DOCKER_REGISTRY}jwtauthentication
-    build:
-      context: .
-      dockerfile: jwtAuthentication/Dockerfile
