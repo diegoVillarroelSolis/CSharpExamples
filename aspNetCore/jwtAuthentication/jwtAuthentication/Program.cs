@@ -20,7 +20,6 @@ namespace jwtAuthentication
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://192.168.0.103:6779")
                 .Build();
     }
 }
