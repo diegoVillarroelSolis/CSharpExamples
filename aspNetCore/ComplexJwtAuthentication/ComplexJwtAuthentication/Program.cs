@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace jwtAuthentication
+namespace ComplexJwtAuthentication
 {
     public class Program
     {
@@ -20,7 +20,6 @@ namespace jwtAuthentication
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:3030")
                 .Build();
     }
 }

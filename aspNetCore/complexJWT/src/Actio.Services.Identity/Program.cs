@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Actio.Common.Commands;
+using Actio.Common.Services;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace jwtAuthentication
+namespace Actio.Services.Identity
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            ServiceHost.Create<Startup>(args)
+                .UseRabbitMq()
+                .SubscribeToCommand<CreateUser>()
+                .Build()
+                .Run();
         }
-
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .UseUrls("http://localhost:3030")
-                .Build();
     }
 }
