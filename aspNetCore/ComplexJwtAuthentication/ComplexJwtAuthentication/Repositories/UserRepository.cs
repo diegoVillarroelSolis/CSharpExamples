@@ -16,7 +16,7 @@ namespace ComplexJwtAuthentication.Repositories
 
         public Task<User> GetAsync(string name)
         {
-            return Task.FromResult(new User() { Name = "user", Password = "secret"});
+            return Task.FromResult(new User("user", "secret"));
         }
     }
 }

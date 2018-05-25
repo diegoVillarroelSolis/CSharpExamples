@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ComplexJwtAuthentication.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ComplexJwtAuthentication.Controllers
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("login")]
     public class AccountController : Controller
     {
@@ -19,9 +21,8 @@ namespace ComplexJwtAuthentication.Controllers
             _userService = userService;
         }
 
-        [Authorize]
-        [HttpGet("hello")]
-        public string hello() { return "hello"; }
+        [HttpGet]
+        public bool validateToken() { return true; }
 
         [AllowAnonymous]
         [HttpPost]
